@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "@reach/router";
 import { AppBar, Toolbar, Grid, Typography } from "@material-ui/core";
 import DarkModeToggle from "react-dark-mode-toggle";
 
@@ -13,13 +12,13 @@ function NavBar({ darkMode, setDarkMode }) {
           </Grid>
           <Grid>
             <Typography>
-              <Link to="/">Home</Link>
+              <a href="/#home">Home</a>
             </Typography>
             <Typography>
-              <Link to="/projects">Projects</Link>
+              <a href="/#projects">Projects</a>
             </Typography>
             <Typography>
-              <Link to="/contact">Contact Me</Link>
+              <a href="/#contact">Contact Me</a>
             </Typography>
             <DarkModeToggle
               onChange={() => {

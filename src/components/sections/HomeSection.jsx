@@ -7,7 +7,7 @@ import MailIcon from "@material-ui/icons/Mail";
 
 function HomeIntroduction() {
   return (
-    <div id="HomeIntroduction">
+    <div id="home">
       <Typography variant="h4" color="secondary">
         Hi there! I'm
       </Typography>
@@ -17,7 +17,7 @@ function HomeIntroduction() {
       <Typography fontWeight="fontWeightBold" variant="p" color="secondary">
         <Box component="span" display="inline" fontWeight="fontWeightBold">
           Software Engineer.
-        </Box>{" "}
+        </Box>
         I specialize in developing Websites and Android Applications.
       </Typography>
       <br />
