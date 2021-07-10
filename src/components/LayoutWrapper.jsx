@@ -1,39 +1,39 @@
 import React, { useState } from "react";
-import { Grid } from "@material-ui/core";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { CssBaseline, Grid, Box } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
 import lightTheme from "../themes/lightTheme";
 import darkTheme from "../themes/darkTheme";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import "../styles/global.css";
 
-const useStyles = makeStyles(theme => ({
-  toolbar: theme.mixins.toolbar,
-  root: {
-    background: theme.palette.primary,
-  },
-}));
-
 function LayoutWrapper(props) {
   const { children } = props;
-  const classes = useStyles();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
-      <div className={classes.root}>
+      <CssBaseline />
+      <Box>
         <NavBar darkMode={isDarkMode} setDarkMode={setIsDarkMode} />
-        <div className={classes.toolbar} />
         <Grid
           container
           direction="column"
           justify="space-between"
           alignItems="center"
+          style={{
+            marginLeft: "0%",
+            marginRight: "0%",
+          }}
         >
-          {children}
-          <Footer />
+          {children.map(child => (
+            <Grid item>{child}</Grid>
+          ))}
+          <Grid item>
+            <Footer />
+          </Grid>
         </Grid>
-      </div>
+      </Box>
     </ThemeProvider>
   );
 }
