@@ -10,6 +10,7 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import ToggleSwitch from "./common/ToggleSwitch";
+import basicInformation from "../content/basic_information.json";
 
 const useStyles = makeStyles({
   root: {
@@ -23,12 +24,12 @@ function NavBar({ darkMode, setDarkMode }) {
 
   return (
     <AppBar color="secondary" classes={{ root: classes.root }}>
-      <Toolbar>
+      <Toolbar disableGutters={!isSmUp}>
         <Grid container justify="space-between" alignItems="center">
           <Grid item sm={3}>
             <Hidden xsDown>
               <Typography variant="h6" color="primary">
-                {`Avi Mishra`}
+                {basicInformation.name_proper_case}
               </Typography>
             </Hidden>
           </Grid>
@@ -38,7 +39,7 @@ function NavBar({ darkMode, setDarkMode }) {
                 container
                 justify={isSmUp ? "flex-end" : "center"}
                 alignItems="center"
-                spacing={4}
+                spacing={isSmUp ? 4 : 2}
               >
                 <Grid item>
                   <Link color="inherit" href="/#home">
@@ -52,7 +53,7 @@ function NavBar({ darkMode, setDarkMode }) {
                 </Grid>
                 <Grid item>
                   <Link color="inherit" href="/#contact">
-                    Contact Me
+                    {isSmUp ? "Contact Me" : "Contact"}
                   </Link>
                 </Grid>
                 <Grid item>

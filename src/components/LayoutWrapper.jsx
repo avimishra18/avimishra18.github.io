@@ -22,17 +22,18 @@ function LayoutWrapper(props) {
           justify="space-between"
           alignItems="center"
           style={{
-            marginLeft: "0%",
-            marginRight: "0%",
+            marginLeft: "4%",
+            marginRight: "4%",
+            width: "92%",
           }}
         >
           {children.map(child => (
-            <Grid item>{child}</Grid>
+            <Grid item style={{ width: "100%" }}>
+              {child}
+            </Grid>
           ))}
-          <Grid item>
-            <Footer />
-          </Grid>
         </Grid>
+        <Footer />
       </Box>
     </ThemeProvider>
   );
