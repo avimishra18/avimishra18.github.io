@@ -29,7 +29,7 @@ function LayoutWrapper(props) {
         >
           {children.map(child => (
             <Grid item style={{ width: "100%" }}>
-              {child}
+              {React.cloneElement(child, { isDarkMode, setIsDarkMode })}
             </Grid>
           ))}
         </Grid>

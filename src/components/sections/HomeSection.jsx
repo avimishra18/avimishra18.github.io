@@ -14,6 +14,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import NavBarSpacing from "../common/NavBarSpacing";
 import basicInformation from "../../content/basic_information.json";
 import CoderSVG from "../../assets/hello_coder.svg";
+import CoderDarkSVG from "../../assets/hello_coder_dark.svg";
 
 function HomeIntroduction({ isMdUp, isSmUp }) {
   const {
@@ -140,7 +141,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
   );
 }
 
-function HomeSection() {
+function HomeSection({ isDarkMode }) {
   const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
   const isMdUp = useMediaQuery(theme => theme.breakpoints.up("md"));
 
@@ -181,7 +182,11 @@ function HomeSection() {
           <HomeIntroduction isMdUp={isMdUp} isSmUp={isSmUp} />
         </Grid>
         <Grid item sm={12} md={4} xl={6}>
-          <img src={CoderSVG} alt="Hello!" width="100%" />
+          <img
+            src={isDarkMode ? CoderDarkSVG : CoderSVG}
+            alt="Hello!"
+            width="100%"
+          />
         </Grid>
       </Grid>
     </div>
