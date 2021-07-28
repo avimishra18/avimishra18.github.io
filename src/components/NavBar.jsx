@@ -13,17 +13,23 @@ import ToggleSwitch from "./common/ToggleSwitch";
 import basicInformation from "../content/basic_information.json";
 
 const useStyles = makeStyles({
-  root: {
+  light: {
     boxShadow: "rgba(0,0,0,.11) 0 1px",
+  },
+  dark: {
+    boxShadow: "none",
   },
 });
 
 function NavBar({ darkMode, setDarkMode }) {
-  const classes = useStyles();
+  const classes = useStyles(darkMode);
   const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
 
   return (
-    <AppBar color="secondary" classes={{ root: classes.root }}>
+    <AppBar
+      color="secondary"
+      classes={darkMode ? { root: classes.dark } : { root: classes.light }}
+    >
       <Toolbar disableGutters={!isSmUp}>
         <Grid container justify="space-between" alignItems="center">
           <Grid item sm={3}>
