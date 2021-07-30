@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import LayoutWrapper from "../components/LayoutWrapper";
-import HomeSection from "../components/sections/HomeSection";
-import ContactSection from "../components/sections/ContactSection";
-import ProjectsSection from "../components/sections/ProjectsSection";
+import LayoutWrapper from "../components/common/LayoutWrapper";
+import HomeSection from "../components/home";
+import ContactSection from "../components/contacts";
+import ProjectsSection from "../components/projects";
 
 export default function Home() {
-
   // To change location.hash on scroll
   function changeRouteOnScroll() {
     const elementsArray = ["home", "projects", "contact"];

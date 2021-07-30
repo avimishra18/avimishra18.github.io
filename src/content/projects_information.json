@@ -1,0 +1,16 @@
+[
+  {
+    "name": "E Labs",
+    "description": "Lorem Ipsum 1",
+    "img_src": "index.jpg",
+    "stacks": ["android", "node", "mongo"],
+    "url": ""
+  },
+  {
+    "name": "NexterDay Events",
+    "description": "Lorem Ipsum 2",
+    "img_src": "index.jpg",
+    "stacks": ["android", "firebase", "mongo"],
+    "url": ""
+  }
+]

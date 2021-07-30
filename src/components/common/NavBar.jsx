@@ -9,8 +9,8 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import ToggleSwitch from "./common/ToggleSwitch";
-import basicInformation from "../content/basic_information.json";
+import ToggleSwitch from "./ToggleSwitch";
+import basicInformation from "../../content/basic_information.json";
 
 const useStyles = makeStyles({
   light: {

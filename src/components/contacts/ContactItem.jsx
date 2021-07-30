@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 
-function ContactItem({ SVG, label, value }) {
+function ContactItem({ Svg, label, value }) {
   return (
     <Grid
       container
@@ -10,7 +10,7 @@ function ContactItem({ SVG, label, value }) {
       style={{ marginTop: "7.5px", marginBottom: "7.5px" }}
     >
       <Grid item style={{ marginRight: "15px" }}>
-        <SVG color="primary" />
+        <Svg color="primary" />
       </Grid>
       <Grid item>
         <Grid container direction="column" justify="center">

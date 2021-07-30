@@ -3,7 +3,7 @@ import { Grid, Typography, TextField, Button } from "@material-ui/core";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import SendIcon from "@material-ui/icons/Send";
 import NavBarSpacing from "../common/NavBarSpacing";
-import ContactItem from "../common/ContactItem";
+import ContactItem from "./ContactItem";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import MailIcon from "@material-ui/icons/Mail";
 import WorkIcon from "@material-ui/icons/Work";
@@ -87,11 +87,11 @@ function ContactInformation() {
       <Typography variant="subtitle1" color="textSecondary">
         Basic Information
       </Typography>
-      <ContactItem SVG={WorkIcon} label="Available for" value={work_status} />
-      <ContactItem SVG={SchoolIcon} label="University" value={university} />
-      <ContactItem SVG={MailIcon} label="Email Address" value={email} />
+      <ContactItem Svg={WorkIcon} label="Available for" value={work_status} />
+      <ContactItem Svg={SchoolIcon} label="University" value={university} />
+      <ContactItem Svg={MailIcon} label="Email Address" value={email} />
       <ContactItem
-        SVG={LocationOnIcon}
+        Svg={LocationOnIcon}
         label="City Of Residence"
         value={city}
       />

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { CssBaseline, Grid, Box } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
-import lightTheme from "../themes/lightTheme";
-import darkTheme from "../themes/darkTheme";
+import lightTheme from "../../themes/lightTheme";
+import darkTheme from "../../themes/darkTheme";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import "../styles/global.css";
+import "../../styles/global.css";
 
 function LayoutWrapper(props) {
   const { children } = props;

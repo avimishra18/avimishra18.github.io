@@ -29,7 +29,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
   } = basicInformation;
 
   return (
-    <Grid id="hehe" container direction="column">
+    <Grid id="home-grid" container direction="column">
       {isMdUp ? null : (
         <>
           <NavBarSpacing />
@@ -72,7 +72,6 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
             <Button
               color="primary"
               variant="outlined"
-              className="social-media-icons"
               href={linkedin_url}
               target="_blank"
               children="Linkedin"
@@ -83,7 +82,6 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
             <Button
               color="primary"
               variant="outlined"
-              className="social-media-icons"
               href={github_url}
               target="_blank"
               children="Github"
@@ -94,7 +92,6 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
             <Button
               color="primary"
               variant="outlined"
-              className="social-media-icons"
               href={`mailto:${email}`}
               target="_blank"
               children="Email"
