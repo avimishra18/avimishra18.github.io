@@ -25,6 +25,7 @@
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "prettier": "2.3.2"
   }
 }
