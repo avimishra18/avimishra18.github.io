@@ -1,20 +1,7 @@
 import React from "react";
-import { Grid, Paper, Typography, Button } from "@material-ui/core";
+import { Grid, Paper, Typography, Box } from "@material-ui/core";
 import IndexImage from "../../content/images/index.jpg";
-import MailIcon from "@material-ui/icons/Mail";
-
-function ProjectStackItems({ children }) {
-  console.log(children);
-  return (
-    <Button
-      color="primary"
-      variant="outlined"
-      className="social-media-icons"
-      children={children}
-      startIcon={<MailIcon />}
-    />
-  );
-}
+import ProjectStackItem from "./ProjectStackItem";
 
 function ProjectItem({ imgSrc, name, description, stacks, url }) {
   console.log(`../../content/images/${imgSrc}`);
@@ -25,12 +12,16 @@ function ProjectItem({ imgSrc, name, description, stacks, url }) {
           <img src={IndexImage} alt="project-cover" />
         </Grid>
         <Grid item>
-          <Typography>{name}</Typography>
+          <Typography variant="h4">
+            <Box component="span" fontWeight="fontWeightBold">
+              {name}
+            </Box>
+          </Typography>
         </Grid>
         <Grid item>
           <Grid container>
             {stacks.map((stack, index) => (
-              <ProjectStackItems children={stack} />
+              <ProjectStackItem stack={stack} />
             ))}
           </Grid>
         </Grid>

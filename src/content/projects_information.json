@@ -1,16 +1,16 @@
 [
   {
-    "name": "E Labs",
-    "description": "Lorem Ipsum 1",
+    "name": "E Labs App",
+    "url": "Lorem Ipsum 1",
     "img_src": "index.jpg",
     "stacks": ["android", "node", "mongo"],
-    "url": ""
+    "description": "Education platform that provides course description, allows to mark attendance. The app uses Bluetooth Beacon (BLE) to transfer data between student and admin app. Built on Android Jetpack, Node.js & MongoDB."
   },
   {
     "name": "NexterDay Events",
-    "description": "Lorem Ipsum 2",
+    "url": "Lorem Ipsum 2",
     "img_src": "index.jpg",
-    "stacks": ["android", "firebase", "mongo"],
-    "url": ""
+    "stacks": ["android", "firebase"],
+    "description": "Event app which helps in finding upcoming events in and around KIIT. The app has 700+ downloads from the play store. The app allows searching events based on preference, direction to the venue of the event using google maps and detailed event itinerary."
   }
 ]
