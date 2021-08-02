@@ -6,7 +6,7 @@ import projectsInformation from "../../content/projects_information.json";
 
 function ProjectsSection() {
   return (
-    <div id="projects">
+    <div id="projects" style={{ paddingLeft: "3vw", paddingRight: "3vw" }}>
       <Typography
         variant="h2"
         color="primary"
@@ -15,17 +15,19 @@ function ProjectsSection() {
         Projects
       </Typography>
       <br />
-      <Grid container>
+      <Grid container spacing={5}>
         {projectsInformation.map(project => {
-          const { name, description, img_src, stacks, url } = project;
+          const { name, description, img_src, stacks, url, github_url } =
+            project;
           return (
-            <Grid item>
+            <Grid item xs={12} md={6}>
               <ProjectItem
                 imgSrc={img_src}
                 name={name}
                 description={description}
                 stacks={stacks}
                 url={url}
+                github_url={github_url}
               />
             </Grid>
           );
