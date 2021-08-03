@@ -20,8 +20,15 @@ function ProjectsSection() {
       <br />
       <Grid container spacing={5}>
         {projectsInformation.map(project => {
-          const { name, description, img_src, stacks, url, github_url } =
-            project;
+          const {
+            name,
+            description,
+            img_src,
+            stacks,
+            url,
+            github_url,
+            store_url,
+          } = project;
           return (
             <Grid item xs={12} md={6}>
               <ProjectItem
@@ -31,6 +38,7 @@ function ProjectsSection() {
                 stacks={stacks}
                 url={url}
                 github_url={github_url}
+                store_url={store_url}
               />
             </Grid>
           );

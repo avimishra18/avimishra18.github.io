@@ -53,7 +53,9 @@ const ToggleSwitch = ({ darkMode, setDarkMode }) => {
       transition-delay: 1s;
       transition: 0.2s ease all;
       z-index: 1;
-      background-color: ${theme.palette.primary.light};
+      background-color: ${darkMode
+        ? theme.palette.secondary.light
+        : theme.palette.primary.light};
     }
     /* Button 1 */
     #button-1 .knobs:before {
@@ -63,13 +65,17 @@ const ToggleSwitch = ({ darkMode, setDarkMode }) => {
       left: 4px;
       width: 32px;
       height: 5px;
-      color: #fff;
+      color: ${darkMode
+        ? theme.palette.primary.main
+        : theme.palette.common.white};
       font-size: 8px;
       font-weight: bold;
       text-align: center;
       line-height: 0.2;
       padding: 9px 4px;
-      background-color: ${theme.palette.primary.main};
+      background-color: ${darkMode
+        ? theme.palette.secondary.main
+        : theme.palette.primary.main};
       border-radius: 30px;
       transition-delay: 1s;
       transition: 0.2s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;

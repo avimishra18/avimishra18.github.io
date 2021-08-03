@@ -12,10 +12,12 @@ function ContactSection() {
   return (
     <div id={CONTACT_SECTION}>
       <NavBarSpacing />
+      <NavBarSpacing />
       <Typography
         variant="h2"
         color="primary"
         style={{ width: "100%", textAlign: "center" }}
+        gutterBottom
       >
         Get In Touch
       </Typography>
@@ -27,13 +29,14 @@ function ContactSection() {
         style={{ width: "100%" }}
       >
         <Grid item xs={12} sm={6} md={4}>
-          <ContactInformation />
+          <ContactInformation isSmUp={isSmUp} />
         </Grid>
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={7}>
           {isSmUp ? null : <br />}
-          <ContactForm />
+          <ContactForm isSmUp={isSmUp} />
         </Grid>
       </Grid>
+      {isSmUp ? <NavBarSpacing /> : null}
     </div>
   );
 }

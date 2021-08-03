@@ -1,29 +1,27 @@
 import React from "react";
 import { Button } from "@material-ui/core";
-import { withStyles, useTheme } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import stackPresets from "../../content/stackPresets";
 
-function ProjectStackItem({ stack }) {
-  const theme = useTheme();
-  const primaryColor = theme.palette.primary.main;
-  const monotoneBadge = true;
+const StackBadge = withStyles({
+  root: {
+    borderRadius: "15px",
+    boxShadow: "none",
+    opacity: 0.85,
+    "&:hover": {
+      background: "none",
+      cursor: "default",
+      opacity: 0.85,
+    },
+  },
+  label: {
+    textTransform: "none",
+  },
+})(Button);
 
-  const { label, icon, color } = stackPresets[stack];
-  const StackBadge = withStyles({
-    root: {
-      color: monotoneBadge ? primaryColor : color,
-      borderColor: monotoneBadge ? primaryColor : color,
-      "&:hover": {
-        background: "none",
-        borderColor: monotoneBadge ? primaryColor : color,
-        cursor: "default",
-      },
-    },
-    label: {
-      textTransform: "none",
-    },
-  })(Button);
+function ProjectStackItem({ stack }) {
+  const { label, icon } = stackPresets[stack];
 
   return (
     <StackBadge
@@ -32,14 +30,7 @@ function ProjectStackItem({ stack }) {
       color="primary"
       variant="outlined"
       children={label}
-      startIcon={
-        <FontAwesomeIcon
-          size="1x"
-          icon={icon}
-          color={monotoneBadge ? primaryColor : color}
-        />
-      }
-      style={{ marginRight: "5px" }}
+      startIcon={<FontAwesomeIcon size="1x" icon={icon} />}
     />
   );
 }

@@ -7,13 +7,14 @@ function ContactItem({ Svg, label, value }) {
       container
       direction="row"
       alignItems="center"
+      wrap="nowrap"
       style={{ marginTop: "7.5px", marginBottom: "7.5px" }}
     >
       <Grid item style={{ marginRight: "15px" }}>
         <Svg color="primary" />
       </Grid>
       <Grid item>
-        <Grid container direction="column" justify="center">
+        <Grid container direction="column" justify="center" wrap="nowrap">
           <Grid item>
             <Typography color="textSecondary">{label}</Typography>
           </Grid>

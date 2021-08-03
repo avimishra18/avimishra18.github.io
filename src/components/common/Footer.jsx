@@ -18,11 +18,11 @@ function Footer() {
         marginTop: "25px",
         padding: "10px 0px",
         width: "100%",
-        borderTop: "1px solid rgba(0,0,0,.11)",
+        borderTop: `1px solid ${theme.palette.secondary.light}`,
         background: theme.palette.background.paper,
       }}
     >
-      <Typography variant="body2">
+      <Typography variant="subtitle2">
         Built with{" "}
         <Typography variant="inherit" color="primary">
           <Link target="_blank" href="https://www.gatsbyjs.com/">
@@ -38,7 +38,7 @@ function Footer() {
           . &nbsp;
         </Typography>
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="subtitle2">
         Designed & Developed by{" "}
         <Typography variant="inherit" color="primary">
           <Link href={`/#${HOME_SECTION}`}>Avi Mishra.</Link>

@@ -20,11 +20,8 @@ import {
 
 const useStyles = makeStyles(theme =>
   createStyles({
-    light: {
-      boxShadow: "rgba(0,0,0,.11) 0 1px",
-    },
-    dark: {
-      boxShadow: "none",
+    root: {
+      boxShadow: `${theme.palette.secondary.light} 0 1px`,
     },
     linkRoot: {
       "&:hover": {
@@ -43,10 +40,7 @@ function NavBar({ darkMode, setDarkMode, activeHashRoute }) {
   breakpointLogger(useMediaQuery, breakpoint);
 
   return (
-    <AppBar
-      color="secondary"
-      classes={darkMode ? { root: classes.dark } : { root: classes.light }}
-    >
+    <AppBar color="secondary" classes={{ root: classes.root }}>
       <Toolbar disableGutters={!isSmUp}>
         <Grid container justify="space-between" alignItems="center">
           <Grid item sm={3}>

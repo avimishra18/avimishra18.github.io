@@ -1,21 +1,48 @@
 import React from "react";
-import { Grid, Paper, Typography, Box, IconButton } from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import {
+  Grid,
+  Paper,
+  Typography,
+  Box,
+  IconButton,
+  Button,
+} from "@material-ui/core";
+import { makeStyles, createStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
 import ProjectStackItem from "./ProjectStackItem";
 
-const useStyles = makeStyles({
-  root: {
-    borderRadius: "12px",
-  },
-});
+const useStyles = makeStyles(theme =>
+  createStyles({
+    root: {
+      borderRadius: "12px",
+    },
+    buttonRoot: {
+      "&:hover": {
+        background:
+          theme.palette.type === "dark"
+            ? theme.palette.secondary.light
+            : theme.palette.primary.light,
+      },
+    },
+  })
+);
 
-function ProjectItem({ imgSrc, name, description, stacks, url, github_url }) {
+function ProjectItem({
+  imgSrc,
+  name,
+  description,
+  stacks,
+  url,
+  github_url,
+  store_url,
+}) {
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
   const classes = useStyles();
+  const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
 
   return (
     <Paper
@@ -41,10 +68,12 @@ function ProjectItem({ imgSrc, name, description, stacks, url, github_url }) {
             marginTop: "2.25%",
           }}
         >
-          <Grid item container justify="space-between" alignItems="stretch">
+          <Grid item container justify="space-between" alignItems="center">
             <Grid item>
-              <Typography variant="h3" color="primary">
-                <Box component="span">{name}</Box>
+              <Typography noWrap variant={isSmUp ? "h3" : "h4"} color="primary">
+                <Box component="span" fontWeight="fontWeightBold">
+                  {name}
+                </Box>
               </Typography>
             </Grid>
             <Grid item>
@@ -54,25 +83,52 @@ function ProjectItem({ imgSrc, name, description, stacks, url, github_url }) {
                 </IconButton>
               ) : null}
               {url ? (
-                <IconButton href={url} target="_blank">
-                  <FontAwesomeIcon
-                    icon={faExternalLinkSquareAlt}
-                    color={primaryColor}
-                  />
-                </IconButton>
+                <Button
+                  size={isSmUp ? "medium" : "small"}
+                  color="primary"
+                  variant="text"
+                  href={url}
+                  target="_blank"
+                  children="Open"
+                  endIcon={
+                    <FontAwesomeIcon
+                      icon={faExternalLinkSquareAlt}
+                      color={primaryColor}
+                    />
+                  }
+                  classes={{ root: classes.buttonRoot }}
+                />
               ) : null}
+              {/*store_url ? (
+                <Button
+                  color="primary"
+                  variant="text"
+                  href={store_url}
+                  target="_blank"
+                  children="PlayStore"
+                  startIcon={
+                    <FontAwesomeIcon icon={faGooglePlay} color={primaryColor} />
+                  }
+                  classes={{ root: classes.buttonRoot }}
+                />
+              ) : null*/}
             </Grid>
           </Grid>
-          <Grid item style={{ marginTop: "2.25%" }}>
-            <Grid container>
-              {stacks.map((stack, index) => (
+          <Grid container item spacing={1} style={{ marginTop: "2.25%" }}>
+            {stacks.map((stack, index) => (
+              <Grid item>
                 <ProjectStackItem stack={stack} />
-              ))}
-            </Grid>
+              </Grid>
+            ))}
           </Grid>
           <Grid item>
             <br />
-            <Typography color="textSecondary">{description}</Typography>
+            <Typography
+              variant={isSmUp ? "body1" : "body2"}
+              color="textSecondary"
+            >
+              {description}
+            </Typography>
             <br />
           </Grid>
         </Grid>

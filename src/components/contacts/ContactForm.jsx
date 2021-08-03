@@ -1,16 +1,36 @@
 import React from "react";
 import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import { makeStyles, createStyles, useTheme } from "@material-ui/core/styles";
 import SendIcon from "@material-ui/icons/Send";
 import basicInformation from "../../content/basic_information.json";
 
-function ContactForm() {
+const useStyles = makeStyles(theme =>
+  createStyles({
+    root: {
+      color: theme.palette.common.white,
+      background: theme.palette.primary.dark,
+      "&:hover": {
+        background: theme.palette.primary.main,
+      },
+    },
+  })
+);
+
+function ContactForm({ isSmUp }) {
+  const theme = useTheme();
+  const classes = useStyles();
   const { contact_form_url } = basicInformation;
   const textFieldTopMargin = "15px";
 
   return (
     <form action={contact_form_url} method="POST">
       <Grid container direction="column">
-        <Typography variant="subtitle1" color="textSecondary">
+        <Typography
+          variant="subtitle1"
+          color="textSecondary"
+          align={isSmUp ? "left" : "center"}
+          gutterBottom
+        >
           Drop me a message
         </Typography>
         <Grid container spacing={2} justify="space-between">
@@ -64,6 +84,9 @@ function ContactForm() {
               children="Send"
               startIcon={<SendIcon />}
               style={{ marginTop: textFieldTopMargin }}
+              classes={{
+                root: theme.palette.type === "dark" ? classes.root : null,
+              }}
             />
           </Grid>
         </Grid>
