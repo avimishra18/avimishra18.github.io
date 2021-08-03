@@ -1,16 +1,20 @@
 [
   {
     "name": "E Labs App",
-    "url": "Lorem Ipsum 1",
-    "img_src": "index.jpg",
+    "img_src": "elabs.png",
     "stacks": ["android", "node", "mongo"],
-    "description": "Education platform that provides course description, allows to mark attendance. The app uses Bluetooth Beacon (BLE) to transfer data between student and admin app. Built on Android Jetpack, Node.js & MongoDB."
+    "description": "Education platform that provides course description, allows to mark attendance. The app uses Bluetooth Beacon (BLE) to transfer data between student and admin app. Built on Android Jetpack, Node.js & MongoDB.",
+    "url": "https://play.google.com/store/apps/details?id=com.androidmonkey.elabs",
+    "store_url": "",
+    "github_url": ""
   },
   {
     "name": "NexterDay Events",
-    "url": "Lorem Ipsum 2",
-    "img_src": "index.jpg",
+    "img_src": "nexterday.png",
     "stacks": ["android", "firebase"],
-    "description": "Event app which helps in finding upcoming events in and around KIIT. The app has 700+ downloads from the play store. The app allows searching events based on preference, direction to the venue of the event using google maps and detailed event itinerary."
+    "description": "Event app which helps in finding upcoming events in and around KIIT. The app has 700+ downloads from the play store. The app allows searching events based on preference, direction to the venue of the event using google maps and detailed event itinerary.",
+    "url": "https://play.google.com/store/apps/details?id=com.androidmonkey.nexterdayevents",
+    "store_url": "",
+    "github_url": ""
   }
 ]
