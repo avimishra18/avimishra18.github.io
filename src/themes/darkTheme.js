@@ -5,19 +5,17 @@ const darkTheme = createMuiTheme({
   palette: {
     type: "dark",
     primary: {
-      dark: "#0000EE",
-      main: "#0066ff",
-      light: "#CCE0FF",
+      dark: "#0C90C4",
+      main: "#0ab9ff",
+      light: "#48CBFF",
     },
     secondary: {
       main: "#121212",
+      light: "#222222",
     },
     text: {
       primary: "#ffffff",
-      secondary: "#7D7C83",
-    },
-    action: {
-      active: "#7D7C83",
+      secondary: "#CBCACE",
     },
     background: {
       default: "#121212",

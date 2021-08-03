@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   const { name_proper_case } = basicInformation;
-  const [activeHashRoute, setActiveHashRoute] = useState(HOME_SECTION);
+  const [activeHashRoute, setActiveHashRoute] = useState();
   const activeRoute = useRef(activeHashRoute);
 
   // History API on modern browsers with fallback on old ones
@@ -47,7 +47,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    updateRoute(HOME_SECTION);
+    // updateRoute(HOME_SECTION);
     changeRouteOnScroll(activeHashRoute);
   }, []);
 

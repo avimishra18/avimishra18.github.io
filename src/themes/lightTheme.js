@@ -11,13 +11,11 @@ const lightTheme = createMuiTheme({
     },
     secondary: {
       main: "#ffffff",
+      light: "rgba(0,0,0,.11)",
     },
     text: {
       primary: "#000000",
-      secondary: "#7D7C83",
-    },
-    action: {
-      active: "#7D7C83",
+      secondary: "#48474b",
     },
     background: {
       default: "#ffffff",
