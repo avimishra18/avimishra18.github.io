@@ -1,19 +1,22 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
-// import NavBarSpacing from "../common/NavBarSpacing";
+import NavBarSpacing from "../common/NavBarSpacing";
 import ProjectItem from "./ProjectItem";
 import projectsInformation from "../../content/projects_information.json";
+import { PROJECTS_SECTION } from "../../utils/constants";
 
 function ProjectsSection() {
   return (
-    <div id="projects" style={{ paddingLeft: "3vw", paddingRight: "3vw" }}>
-      <Typography
-        variant="h2"
-        color="primary"
-        // style={{ width: "100%", textAlign: "center" }}
-      >
+    <div
+      id={PROJECTS_SECTION}
+      style={{ paddingLeft: "3vw", paddingRight: "3vw" }}
+    >
+      <NavBarSpacing />
+      <br />
+      <Typography variant="h2" color="primary">
         Projects
       </Typography>
+      <br />
       <br />
       <Grid container spacing={5}>
         {projectsInformation.map(project => {

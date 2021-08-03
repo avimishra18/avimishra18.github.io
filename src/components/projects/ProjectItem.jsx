@@ -9,7 +9,6 @@ import ProjectStackItem from "./ProjectStackItem";
 const useStyles = makeStyles({
   root: {
     borderRadius: "12px",
-    // borderColor: "#000",
   },
 });
 

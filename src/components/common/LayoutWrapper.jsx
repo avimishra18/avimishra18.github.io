@@ -8,14 +8,18 @@ import Footer from "./Footer";
 import "../../styles/global.css";
 
 function LayoutWrapper(props) {
-  const { children } = props;
+  const { children, activeHashRoute } = props;
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <Box>
-        <NavBar darkMode={isDarkMode} setDarkMode={setIsDarkMode} />
+        <NavBar
+          darkMode={isDarkMode}
+          setDarkMode={setIsDarkMode}
+          activeHashRoute={activeHashRoute}
+        />
         <Grid
           container
           direction="column"

@@ -4,12 +4,13 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import NavBarSpacing from "../common/NavBarSpacing";
 import ContactInformation from "./ContactInformation";
 import ContactForm from "./ContactForm";
+import { CONTACT_SECTION } from "../../utils/constants";
 
 function ContactSection() {
   const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
 
   return (
-    <div id="contact">
+    <div id={CONTACT_SECTION}>
       <NavBarSpacing />
       <Typography
         variant="h2"

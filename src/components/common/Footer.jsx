@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { HOME_SECTION } from "../../utils/constants";
 
 function Footer() {
   const theme = useTheme();
@@ -24,17 +25,23 @@ function Footer() {
       <Typography variant="body2">
         Built with{" "}
         <Typography variant="inherit" color="primary">
-          Gatsby{" "}
+          <Link target="_blank" href="https://www.gatsbyjs.com/">
+            Gatsby
+          </Link>{" "}
         </Typography>
         &{" "}
         <Typography variant="inherit" color="primary">
-          Material-UI. &nbsp;
+          <Link target="_blank" href="https://material-ui.com/">
+            {" "}
+            Material-UI
+          </Link>
+          . &nbsp;
         </Typography>
       </Typography>
       <Typography variant="body2">
         Designed & Developed by{" "}
         <Typography variant="inherit" color="primary">
-          Avi Mishra.
+          <Link href={`/#${HOME_SECTION}`}>Avi Mishra.</Link>
         </Typography>
       </Typography>
     </Grid>

@@ -4,36 +4,15 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import HomeIntroduction from "./HomeIntroduction.";
 import CoderSVG from "../../assets/hello_coder.svg";
 import CoderDarkSVG from "../../assets/hello_coder_dark.svg";
+import { HOME_SECTION } from "../../utils/constants";
 
 function HomeSection({ isDarkMode }) {
   const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
   const isMdUp = useMediaQuery(theme => theme.breakpoints.up("md"));
 
-  // Breakpoints Commit
-  console.log(
-    "xs",
-    useMediaQuery(theme => theme.breakpoints.only("xs"))
-  );
-  console.log(
-    "sm",
-    useMediaQuery(theme => theme.breakpoints.only("sm"))
-  );
-  console.log(
-    "md",
-    useMediaQuery(theme => theme.breakpoints.only("md"))
-  );
-  console.log(
-    "lg",
-    useMediaQuery(theme => theme.breakpoints.only("lg"))
-  );
-  console.log(
-    "xl",
-    useMediaQuery(theme => theme.breakpoints.only("xl"))
-  );
-
   return (
     <div
-      id="home"
+      id={HOME_SECTION}
       style={{ height: isMdUp ? "100vh" : "", width: isMdUp ? "90vw" : "" }}
     >
       <Grid

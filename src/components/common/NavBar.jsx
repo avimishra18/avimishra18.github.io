@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   AppBar,
   Toolbar,
@@ -7,23 +7,40 @@ import {
   Link,
   Hidden,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createStyles, useTheme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import breakpointLogger from "../../utils/breakpointLogger";
 import ToggleSwitch from "./ToggleSwitch";
 import basicInformation from "../../content/basic_information.json";
+import {
+  HOME_SECTION,
+  PROJECTS_SECTION,
+  CONTACT_SECTION,
+} from "../../utils/constants";
 
-const useStyles = makeStyles({
-  light: {
-    boxShadow: "rgba(0,0,0,.11) 0 1px",
-  },
-  dark: {
-    boxShadow: "none",
-  },
-});
+const useStyles = makeStyles(theme =>
+  createStyles({
+    light: {
+      boxShadow: "rgba(0,0,0,.11) 0 1px",
+    },
+    dark: {
+      boxShadow: "none",
+    },
+    linkRoot: {
+      "&:hover": {
+        color: theme.palette.text.primary,
+      },
+    },
+  })
+);
 
-function NavBar({ darkMode, setDarkMode }) {
-  const classes = useStyles(darkMode);
+function NavBar({ darkMode, setDarkMode, activeHashRoute }) {
+  const theme = useTheme();
+  const primaryColor = theme.palette.primary.main;
+  const classes = useStyles();
   const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
+  const breakpoint = useRef();
+  breakpointLogger(useMediaQuery, breakpoint);
 
   return (
     <AppBar
@@ -48,17 +65,44 @@ function NavBar({ darkMode, setDarkMode }) {
                 spacing={isSmUp ? 4 : 2}
               >
                 <Grid item>
-                  <Link color="inherit" href="/#home">
+                  <Link
+                    underline="none"
+                    color="inherit"
+                    href={`/#${HOME_SECTION}`}
+                    classes={{ root: classes.linkRoot }}
+                    style={{
+                      color:
+                        activeHashRoute === HOME_SECTION ? primaryColor : null,
+                    }}
+                  >
                     Home
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link color="inherit" href="/#projects">
+                  <Link
+                    underline="none"
+                    color="inherit"
+                    href={`/#${PROJECTS_SECTION}`}
+                    classes={{ root: classes.linkRoot }}
+                    style={{
+                      color:
+                        activeHashRoute === "projects" ? primaryColor : null,
+                    }}
+                  >
                     Projects
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link color="inherit" href="/#contact">
+                  <Link
+                    underline="none"
+                    color="inherit"
+                    href={`/#${CONTACT_SECTION}`}
+                    classes={{ root: classes.linkRoot }}
+                    style={{
+                      color:
+                        activeHashRoute === "contact" ? primaryColor : null,
+                    }}
+                  >
                     {isSmUp ? "Contact Me" : "Contact"}
                   </Link>
                 </Grid>
