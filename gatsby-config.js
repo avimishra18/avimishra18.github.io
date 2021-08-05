@@ -7,4 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [],
-}
+
+  // For GitHub Pages
+  // pathPrefix: `/<project-names>,
+};

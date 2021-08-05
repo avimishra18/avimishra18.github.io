@@ -5,13 +5,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
     "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
+    "build": "gatsby build --prefix-paths",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "deploy": "npm run clean && npm run build && gh-pages -d public",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -26,6 +25,7 @@
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "gh-pages": "^3.2.3",
     "prettier": "2.3.2"
   }
 }
