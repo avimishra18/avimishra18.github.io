@@ -9,6 +9,10 @@ import {
   PROJECTS_SECTION,
   CONTACT_SECTION,
 } from "../utils/constants";
+import "@fontsource/inter/300.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/inter/900.css";
 
 export default function Home() {
   const { name_proper_case } = basicInformation;
