@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://avimishra18-portfolio/./src/pages/404.js"],"names":[],"mappings":"wJAMA,UAJA,WACE,OAAO","file":"component---src-pages-404-js-77db8ff97579678f7c0a.js","sourcesContent":["import React from \"react\";\r\n\r\nfunction NotFound() {\r\n  return <div>Not Found!</div>;\r\n}\r\n\r\nexport default NotFound;\r\n"],"sourceRoot":""}
