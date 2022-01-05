@@ -1,4 +1,6 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import {
   Grid,
   Paper,
@@ -37,12 +39,45 @@ function ProjectItem({
   stacks,
   url,
   github_url,
-  store_url,
+  // store_url,
 }) {
   const theme = useTheme();
   const primaryColor = theme.palette.primary.main;
   const classes = useStyles();
   const isSmUp = useMediaQuery(theme => theme.breakpoints.up("sm"));
+
+  const data = useStaticQuery(
+    graphql`
+      query ImagesQuery {
+        allFile(
+          filter: {
+            sourceInstanceName: { eq: "assets" }
+            ext: { regex: "/(jpg)|(jpeg)|(png)/" }
+          }
+        ) {
+          edges {
+            node {
+              absolutePath
+              childImageSharp {
+                fluid {
+                  aspectRatio
+                  base64
+                  originalName
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const oneImage = data.allFile.edges.filter(
+    edge => edge.node.childImageSharp.fluid.originalName === imgSrc
+  )[0].node.childImageSharp.fluid;
 
   return (
     <Paper
@@ -52,11 +87,7 @@ function ProjectItem({
     >
       <Grid container direction="column">
         <Grid item style={{ width: "100%" }}>
-          <img
-            src={`./${imgSrc}`}
-            alt="project-cover"
-            style={{ width: "100%" }}
-          />
+          <Img fluid={oneImage} alt="project-cover" style={{ width: "100%" }} />
         </Grid>
         <Grid
           item
