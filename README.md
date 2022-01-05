@@ -41,7 +41,7 @@ Update personal information such as name, email & IDs in `basic_information.json
 
 1. `projects_information.json`: Contains an array of objects, where each object corresponds to an individual project.
 
-   ```json
+   ```jsonc
    [
      {
        "name": "Project A",
