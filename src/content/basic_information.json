@@ -4,12 +4,14 @@
   "name_proper_case": "Avi Mishra",
   "email": "mishra.avi18@gmail.com",
   "github_url": "https://github.com/avimishra18",
-  "linkedin_url": "https://www.linkedin.com/in/avimishra18/",
-  "city": "Delhi NCR, India",
+  "linkedin_url": "https://linkedin.com/in/avimishra18/",
+  "twitter_url": "https://twitter.com/avi18tweets",
+  "city": "Hyderabad, India",
   "salutation": "Namaste! I'm-",
   "profession": "Software Engineer.",
-  "short_introduction": "I specialize in developing Websites and Android Applications. Currently, interning as a front-end developer.",
-  "work_status": "Freelancing/Full-Time Opportunity",
+  "short_introduction": "I specialize in developing websites and apps. Currently, working as a front-end developer primarily on ReactJS.",
+  "work_status": "Full-Time Opportunity",
   "university": "KIIT Bhubaneswar",
   "contact_form_url": "https://formspree.io/f/xbjqadey"
 }
+

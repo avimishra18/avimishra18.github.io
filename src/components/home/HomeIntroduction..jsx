@@ -8,7 +8,11 @@ import {
   IconButton,
 } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import MailIcon from "@material-ui/icons/Mail";
 import NavBarSpacing from "../common/NavBarSpacing";
 import basicInformation from "../../content/basic_information.json";
@@ -20,6 +24,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
     email,
     github_url,
     linkedin_url,
+    twitter_url,
     salutation,
     profession,
     short_introduction,
@@ -56,15 +61,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
         <br />
       </Grid>
       <Hidden xsDown>
-        <Grid
-          container
-          alignItems="center"
-          sm={12}
-          md={8}
-          lg={6}
-          wrap={true}
-          spacing={2}
-        >
+        <Grid container alignItems="center" sm={12} wrap={true} spacing={2}>
           <Grid item>
             <Button
               color="primary"
@@ -73,6 +70,16 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               target="_blank"
               children="Linkedin"
               startIcon={<FontAwesomeIcon size="2x" icon={faLinkedin} />}
+            />
+          </Grid>
+          <Grid item>
+            <Button
+              color="primary"
+              variant="outlined"
+              href={twitter_url}
+              target="_blank"
+              children="Twitter"
+              startIcon={<FontAwesomeIcon size="2x" icon={faTwitter} />}
             />
           </Grid>
           <Grid item>
@@ -114,6 +121,16 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               color="primary"
               variant="outlined"
               className="social-media-icons"
+              href={twitter_url}
+              target="_blank"
+              children={<FontAwesomeIcon size="1x" icon={faTwitter} />}
+            />
+          </Grid>
+          <Grid item>
+            <IconButton
+              color="primary"
+              variant="outlined"
+              className="social-media-icons"
               href={github_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faGithub} />}
@@ -136,3 +153,4 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
 }
 
 export default HomeIntroduction;
+
