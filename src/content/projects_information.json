@@ -1,5 +1,14 @@
 [
   {
+    "name": "Volto Educal Theme",
+    "img_src": "volto_educal.png",
+    "stacks": ["react"],
+    "description": "A volto theme add-on based on educal theme. This repository is the work product of Google Summer of Code 2022 project - \"Create new Volto theme\" developed for the Plone Foundation.",
+    "url": "https://github.com/collective/volto-educal-theme",
+    "store_url": "",
+    "github_url": ""
+  },
+  {
     "name": "E Labs App",
     "img_src": "elabs.png",
     "stacks": ["android", "node", "mongo"],
@@ -18,3 +27,4 @@
     "github_url": ""
   }
 ]
+
