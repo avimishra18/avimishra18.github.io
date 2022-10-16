@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkavimishra18_portfolio=self.webpackChunkavimishra18_portfolio||[]).push([[883],{429:function(e,t,i){i.r(t);var n=i(7294);t.default=function(){return n.createElement("div",null,"Not Found!")}}}]);
+//# sourceMappingURL=component---src-pages-404-js-8037f65320fdcae48575.js.map
