@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Grid, Typography } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import NavBarSpacing from "../common/NavBarSpacing";
 import ContactInformation from "./ContactInformation";
 import ContactForm from "./ContactForm";
@@ -25,7 +25,7 @@ function ContactSection() {
       <Grid
         container
         alignItems="stretch"
-        justify="center"
+        justifyContent="center"
         style={{ width: "100%" }}
       >
         <Grid item xs={12} sm={6} md={4}>

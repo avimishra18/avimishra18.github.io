@@ -1,9 +1,9 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme, adaptV4Theme } from "@mui/material/styles";
 import { typography } from "./common";
 
-const lightTheme = createMuiTheme({
+const lightTheme = createTheme(adaptV4Theme({
   palette: {
-    type: "light",
+    mode: "light",
     primary: {
       dark: "#0000EE",
       main: "#0066ff",
@@ -23,6 +23,6 @@ const lightTheme = createMuiTheme({
     },
   },
   typography,
-});
+}));
 
 export default lightTheme;

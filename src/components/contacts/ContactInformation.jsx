@@ -1,10 +1,10 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@mui/material";
 import ContactItem from "./ContactItem";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import MailIcon from "@material-ui/icons/Mail";
-import WorkIcon from "@material-ui/icons/Work";
-import SchoolIcon from "@material-ui/icons/School";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MailIcon from "@mui/icons-material/Mail";
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
 import basicInformation from "../../content/basic_information.json";
 
 function ContactInformation({ isSmUp }) {

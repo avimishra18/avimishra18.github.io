@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@mui/material";
 import NavBarSpacing from "../common/NavBarSpacing";
 import ProjectItem from "./ProjectItem";
 import projectsInformation from "../../content/projects_information.json";

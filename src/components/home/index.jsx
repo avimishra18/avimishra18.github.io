@@ -1,6 +1,6 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Grid } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import HomeIntroduction from "./HomeIntroduction.";
 import CoderSVG from "../../assets/hello_coder.svg";
 import CoderDarkSVG from "../../assets/hello_coder_dark.svg";
@@ -17,7 +17,7 @@ function HomeSection({ isDarkMode }) {
     >
       <Grid
         container
-        justify={isMdUp ? "space-evenly" : "center"}
+        justifyContent={isMdUp ? "space-evenly" : "center"}
         alignItems="center"
         style={{ height: "100%" }}
       >

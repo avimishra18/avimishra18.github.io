@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, Typography, Link } from "@material-ui/core";
-import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Grid, Typography, Link } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { HOME_SECTION } from "../../utils/constants";
 
 function Footer() {
@@ -12,7 +12,7 @@ function Footer() {
     <Grid
       container
       direction={isSmUp ? "row" : "column"}
-      justify="center"
+      justifyContent="center"
       alignItems="center"
       style={{
         marginTop: "25px",
@@ -41,7 +41,7 @@ function Footer() {
       <Typography variant="subtitle2">
         Designed & Developed by{" "}
         <Typography variant="inherit" color="primary">
-          <Link href={`/#${HOME_SECTION}`}>Avi Mishra.</Link>
+          Avi Mishra.
         </Typography>
       </Typography>
     </Grid>
@@ -49,3 +49,4 @@ function Footer() {
 }
 
 export default Footer;
+

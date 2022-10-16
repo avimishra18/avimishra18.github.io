@@ -8,9 +8,11 @@ import {
   Box,
   IconButton,
   Button,
-} from "@material-ui/core";
-import { makeStyles, createStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
@@ -24,7 +26,7 @@ const useStyles = makeStyles(theme =>
     buttonRoot: {
       "&:hover": {
         background:
-          theme.palette.type === "dark"
+          theme.palette.mode === "dark"
             ? theme.palette.secondary.light
             : theme.palette.primary.light,
       },
@@ -99,7 +101,7 @@ function ProjectItem({
             marginTop: "2.25%",
           }}
         >
-          <Grid item container justify="space-between" alignItems="center">
+          <Grid item container justifyContent="space-between" alignItems="center">
             <Grid item>
               <Typography noWrap variant={isSmUp ? "h3" : "h4"} color="primary">
                 <Box component="span" fontWeight="fontWeightBold">
@@ -109,7 +111,7 @@ function ProjectItem({
             </Grid>
             <Grid item>
               {github_url ? (
-                <IconButton href={github_url} target="_blank">
+                <IconButton href={github_url} target="_blank" size="large">
                   <FontAwesomeIcon icon={faGithub} color={primaryColor} />
                 </IconButton>
               ) : null}

@@ -6,14 +6,14 @@ import {
   Button,
   Hidden,
   IconButton,
-} from "@material-ui/core";
+} from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import MailIcon from "@material-ui/icons/Mail";
+import MailIcon from "@mui/icons-material/Mail";
 import NavBarSpacing from "../common/NavBarSpacing";
 import basicInformation from "../../content/basic_information.json";
 
@@ -60,7 +60,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
       <Grid item>
         <br />
       </Grid>
-      <Hidden xsDown>
+      <Hidden smDown>
         <Grid container alignItems="center" sm={12} wrap={true} spacing={2}>
           <Grid item>
             <Button
@@ -105,7 +105,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
         </Grid>
       </Hidden>
       <Hidden smUp>
-        <Grid container alignItems="center" justify="center">
+        <Grid container alignItems="center" justifyContent="center">
           <Grid item>
             <IconButton
               color="primary"
@@ -114,7 +114,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={linkedin_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faLinkedin} />}
-            />
+              size="large" />
           </Grid>
           <Grid item>
             <IconButton
@@ -124,7 +124,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={twitter_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faTwitter} />}
-            />
+              size="large" />
           </Grid>
           <Grid item>
             <IconButton
@@ -134,7 +134,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={github_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faGithub} />}
-            />
+              size="large" />
           </Grid>
           <Grid item>
             <IconButton
@@ -144,7 +144,7 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={`mailto:${email}`}
               target="_blank"
               children={<MailIcon />}
-            />
+              size="large" />
           </Grid>
         </Grid>
       </Hidden>

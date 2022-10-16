@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useTheme } from "@material-ui/core/styles";
+import { useTheme } from "@mui/material/styles";
 
 const ToggleSwitch = ({ darkMode, setDarkMode }) => {
   const theme = useTheme();

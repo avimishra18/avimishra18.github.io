@@ -1,7 +1,9 @@
 import React from "react";
-import { Grid, Typography, TextField, Button } from "@material-ui/core";
-import { makeStyles, createStyles, useTheme } from "@material-ui/core/styles";
-import SendIcon from "@material-ui/icons/Send";
+import { Grid, Typography, TextField, Button } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
+import SendIcon from "@mui/icons-material/Send";
 import basicInformation from "../../content/basic_information.json";
 
 const useStyles = makeStyles(theme =>
@@ -33,7 +35,7 @@ function ContactForm({ isSmUp }) {
         >
           Drop me a message
         </Typography>
-        <Grid container spacing={2} justify="space-between">
+        <Grid container spacing={2} justifyContent="space-between">
           <Grid item xs={6}>
             <TextField
               type="name"
@@ -75,7 +77,7 @@ function ContactForm({ isSmUp }) {
           rows={3}
           style={{ marginTop: textFieldTopMargin }}
         />
-        <Grid container justify="flex-end">
+        <Grid container justifyContent="flex-end">
           <Grid item>
             <Button
               type="submit"
@@ -85,7 +87,7 @@ function ContactForm({ isSmUp }) {
               startIcon={<SendIcon />}
               style={{ marginTop: textFieldTopMargin }}
               classes={{
-                root: theme.palette.type === "dark" ? classes.root : null,
+                root: theme.palette.mode === "dark" ? classes.root : null,
               }}
             />
           </Grid>

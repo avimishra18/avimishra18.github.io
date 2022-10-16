@@ -6,9 +6,11 @@ import {
   Typography,
   Link,
   Hidden,
-} from "@material-ui/core";
-import { makeStyles, createStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
+import useMediaQuery from "@mui/material/useMediaQuery";
 import breakpointLogger from "../../utils/breakpointLogger";
 import ToggleSwitch from "./ToggleSwitch";
 import basicInformation from "../../content/basic_information.json";
@@ -42,9 +44,9 @@ function NavBar({ darkMode, setDarkMode, activeHashRoute }) {
   return (
     <AppBar color="secondary" classes={{ root: classes.root }}>
       <Toolbar disableGutters={!isSmUp}>
-        <Grid container justify="space-between" alignItems="center">
+        <Grid container justifyContent="space-between" alignItems="center">
           <Grid item sm={3}>
-            <Hidden xsDown>
+            <Hidden smDown>
               <Typography variant="h6" color="primary">
                 {basicInformation.name_proper_case}
               </Typography>
@@ -54,7 +56,7 @@ function NavBar({ darkMode, setDarkMode, activeHashRoute }) {
             <Typography component="span" variant="h5" color="textSecondary">
               <Grid
                 container
-                justify={isSmUp ? "flex-end" : "center"}
+                justifyContent={isSmUp ? "flex-end" : "center"}
                 alignItems="center"
                 spacing={isSmUp ? 4 : 2}
               >
