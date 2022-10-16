@@ -1,7 +1,7 @@
-import { createTheme, adaptV4Theme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { typography } from "./common";
 
-const lightTheme = createTheme(adaptV4Theme({
+const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
@@ -23,6 +23,7 @@ const lightTheme = createTheme(adaptV4Theme({
     },
   },
   typography,
-}));
+});
 
 export default lightTheme;
+
