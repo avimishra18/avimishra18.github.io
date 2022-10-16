@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { CssBaseline, Grid, Box } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import lightTheme from "../../themes/lightTheme";
 import darkTheme from "../../themes/darkTheme";
@@ -46,3 +48,4 @@ function LayoutWrapper(props) {
 }
 
 export default LayoutWrapper;
+

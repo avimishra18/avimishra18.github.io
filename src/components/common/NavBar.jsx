@@ -1,15 +1,13 @@
 import React, { useRef } from "react";
-import {
-  AppBar,
-  Toolbar,
-  Grid,
-  Typography,
-  Link,
-  Hidden,
-} from "@mui/material";
+import AppBar from "@mui/material/AppBar";
+import Grid from "@mui/material/Grid";
+import Hidden from "@mui/material/Hidden";
+import Link from "@mui/material/Link";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
-import makeStyles from '@mui/styles/makeStyles';
-import createStyles from '@mui/styles/createStyles';
+import makeStyles from "@mui/styles/makeStyles";
+import createStyles from "@mui/styles/createStyles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import breakpointLogger from "../../utils/breakpointLogger";
 import ToggleSwitch from "./ToggleSwitch";
@@ -115,3 +113,4 @@ function NavBar({ darkMode, setDarkMode, activeHashRoute }) {
 }
 
 export default NavBar;
+

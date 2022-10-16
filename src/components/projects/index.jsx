@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import NavBarSpacing from "../common/NavBarSpacing";
 import ProjectItem from "./ProjectItem";
 import projectsInformation from "../../content/projects_information.json";
@@ -49,3 +50,4 @@ function ProjectsSection() {
 }
 
 export default ProjectsSection;
+

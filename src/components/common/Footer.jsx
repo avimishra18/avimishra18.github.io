@@ -1,8 +1,9 @@
 import React from "react";
-import { Grid, Typography, Link } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { HOME_SECTION } from "../../utils/constants";
 
 function Footer() {
   const theme = useTheme();

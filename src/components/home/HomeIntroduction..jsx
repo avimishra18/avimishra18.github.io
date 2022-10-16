@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  Grid,
-  Typography,
-  Box,
-  Button,
-  Hidden,
-  IconButton,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Hidden from "@mui/material/Hidden";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -114,7 +112,8 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={linkedin_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faLinkedin} />}
-              size="large" />
+              size="large"
+            />
           </Grid>
           <Grid item>
             <IconButton
@@ -124,7 +123,8 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={twitter_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faTwitter} />}
-              size="large" />
+              size="large"
+            />
           </Grid>
           <Grid item>
             <IconButton
@@ -134,7 +134,8 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={github_url}
               target="_blank"
               children={<FontAwesomeIcon size="1x" icon={faGithub} />}
-              size="large" />
+              size="large"
+            />
           </Grid>
           <Grid item>
             <IconButton
@@ -144,7 +145,8 @@ function HomeIntroduction({ isMdUp, isSmUp }) {
               href={`mailto:${email}`}
               target="_blank"
               children={<MailIcon />}
-              size="large" />
+              size="large"
+            />
           </Grid>
         </Grid>
       </Hidden>

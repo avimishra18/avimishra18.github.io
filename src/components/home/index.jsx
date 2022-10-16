@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import HomeIntroduction from "./HomeIntroduction.";
 import CoderSVG from "../../assets/hello_coder.svg";
@@ -37,3 +37,4 @@ function HomeSection({ isDarkMode }) {
 }
 
 export default HomeSection;
+

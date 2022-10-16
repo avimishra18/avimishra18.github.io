@@ -1,17 +1,15 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import {
-  Grid,
-  Paper,
-  Typography,
-  Box,
-  IconButton,
-  Button,
-} from "@mui/material";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
-import makeStyles from '@mui/styles/makeStyles';
-import createStyles from '@mui/styles/createStyles';
+import makeStyles from "@mui/styles/makeStyles";
+import createStyles from "@mui/styles/createStyles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -101,7 +99,12 @@ function ProjectItem({
             marginTop: "2.25%",
           }}
         >
-          <Grid item container justifyContent="space-between" alignItems="center">
+          <Grid
+            item
+            container
+            justifyContent="space-between"
+            alignItems="center"
+          >
             <Grid item>
               <Typography noWrap variant={isSmUp ? "h3" : "h4"} color="primary">
                 <Box component="span" fontWeight="fontWeightBold">
@@ -171,3 +174,4 @@ function ProjectItem({
 }
 
 export default ProjectItem;
+

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "@mui/material";
-import withStyles from '@mui/styles/withStyles';
+import Button from "@mui/material/Button";
+import withStyles from "@mui/styles/withStyles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import stackPresets from "../../content/stackPresets";
 
@@ -36,3 +36,4 @@ function ProjectStackItem({ stack }) {
 }
 
 export default ProjectStackItem;
+

@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import ContactItem from "./ContactItem";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailIcon from "@mui/icons-material/Mail";
@@ -36,3 +37,4 @@ function ContactInformation({ isSmUp }) {
 }
 
 export default ContactInformation;
+

@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 
 function ContactItem({ Svg, label, value }) {
   return (
@@ -14,7 +15,12 @@ function ContactItem({ Svg, label, value }) {
         <Svg color="primary" />
       </Grid>
       <Grid item>
-        <Grid container direction="column" justifyContent="center" wrap="nowrap">
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          wrap="nowrap"
+        >
           <Grid item>
             <Typography color="textSecondary">{label}</Typography>
           </Grid>
@@ -28,3 +34,4 @@ function ContactItem({ Svg, label, value }) {
 }
 
 export default ContactItem;
+

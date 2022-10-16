@@ -1,8 +1,11 @@
 import React from "react";
-import { Grid, Typography, TextField, Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
-import makeStyles from '@mui/styles/makeStyles';
-import createStyles from '@mui/styles/createStyles';
+import makeStyles from "@mui/styles/makeStyles";
+import createStyles from "@mui/styles/createStyles";
 import SendIcon from "@mui/icons-material/Send";
 import basicInformation from "../../content/basic_information.json";
 
@@ -98,3 +101,4 @@ function ContactForm({ isSmUp }) {
 }
 
 export default ContactForm;
+
