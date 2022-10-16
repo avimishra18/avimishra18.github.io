@@ -24,13 +24,13 @@ function Footer() {
     >
       <Typography variant="subtitle2">
         Built with{" "}
-        <Typography variant="inherit" color="primary">
+        <Typography variant="inherit" color="primary" display="inline">
           <Link target="_blank" href="https://www.gatsbyjs.com/">
             Gatsby
           </Link>{" "}
         </Typography>
         &{" "}
-        <Typography variant="inherit" color="primary">
+        <Typography variant="inherit" color="primary" display="inline">
           <Link target="_blank" href="https://material-ui.com/">
             {" "}
             Material-UI
@@ -40,7 +40,7 @@ function Footer() {
       </Typography>
       <Typography variant="subtitle2">
         Designed & Developed by{" "}
-        <Typography variant="inherit" color="primary">
+        <Typography variant="inherit" color="primary" display="inline">
           Avi Mishra.
         </Typography>
       </Typography>
